@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ChatApp</string>
+    <string name="e_mail">E-MAIL</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="already_have_account">Already have account ?</string>
+    <string name="user_name">User Name</string>
+    <string name="login">Login</string>
+    <string name="please_click_back_again_to_exit">Please click back again to exit</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="err_msg_enter_user_name">Please enter the user name.</string>
+    <string name="err_msg_enter_email">Please enter email.</string>
+    <string name="err_msg_enter_password">Please enter password.</string>
+    <string name="err_msg_enter_confirm_password">Please enter confirm password.</string>
+    <string name="err_msg_password_and_confirm_password_mismatch">Password and confirm password does not match.</string>
+    <string name="register_success">Register success</string>
+    <string name="read_storage_permission_denied">Read storage permission is denied</string>
+    <string name="image_selection_failed">Image selection failed</string>
+    <string name="messenger">Messenger</string>
+    <string name="select_user">Select User</string>
+    <string name="no_users_to_show">No users to show</string>
+    <string name="no_messages_to_show">No messages to show</string>
+    <string name="user_image">user image</string>
+    <string name="title_user_name">Title user name</string>
+    <string name="button_send_messages">Send</string>
+    <string name="message">Message</string>
+    <string name="no_message_found">No messages found</string>
+    <string name="seen">Seen</string>
+</resources>
