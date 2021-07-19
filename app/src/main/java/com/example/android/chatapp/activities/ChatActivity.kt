@@ -116,8 +116,8 @@ class ChatActivity :BaseActivity() {
             val llm = LinearLayoutManager(this)
             llm.stackFromEnd = true
             llm.reverseLayout = false
-
             binding.rvChatMessagesList.layoutManager=llm
+
             binding.rvChatMessagesList.setHasFixedSize(true)
             val myAdapter = UserMessagesAdapter(
                     this,

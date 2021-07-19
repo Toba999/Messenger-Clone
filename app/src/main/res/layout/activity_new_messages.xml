@@ -30,12 +30,29 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <EditText
+        android:id="@+id/et_search_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rv_my_users"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_new_messages_activity"
+        android:hint="@string/search"
+        android:textSize="@dimen/etTextSize"
+        android:textColor="@color/PrimaryTextColor"
+        android:textColorHint="@color/SecondaryTextColor"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:background="@drawable/tv_background"
+        android:padding="15dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_my_users"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="110dp"
         android:visibility="gone"
+        tools:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

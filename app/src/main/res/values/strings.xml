@@ -28,4 +28,5 @@
     <string name="message">Message</string>
     <string name="no_message_found">No messages found</string>
     <string name="seen">Seen</string>
+    <string name="search">Search</string>
 </resources>

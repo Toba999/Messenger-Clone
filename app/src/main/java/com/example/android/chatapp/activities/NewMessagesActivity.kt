@@ -1,10 +1,12 @@
 package com.example.android.chatapp.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.android.chatapp.R
+import com.example.android.chatapp.adapter.LatestMessagesAdapter
 import com.example.android.chatapp.adapter.UsersAdapter
 import com.example.android.chatapp.databinding.ActivityNewMessagesBinding
 import com.example.android.chatapp.fireStore.FireStoreClass
@@ -14,6 +16,8 @@ class NewMessagesActivity : BaseActivity() {
     private lateinit var binding : ActivityNewMessagesBinding
     private var currentUser: User? = null
     private lateinit var mUsersList: ArrayList<User>
+    var adapterUsers : UsersAdapter?=null
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +28,22 @@ class NewMessagesActivity : BaseActivity() {
         getUsersList()
         getCurrentUserDetails()
         setupActionBar()
+
+        binding.etSearchUser.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(charSequence: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(charSequence: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                filter(s.toString())
+            }
+        })
     }
+
+
+
     private fun getCurrentUserDetails(){
         FireStoreClass().getUserDetails(this)
     }
@@ -45,7 +64,15 @@ class NewMessagesActivity : BaseActivity() {
         }
     }
 
-
+    private fun filter(text: String) {
+        val filteredList: ArrayList<User> = ArrayList()
+        for (user in mUsersList) {
+            if (user.userName.toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(user)
+            }
+        }
+        adapterUsers?.filterList(filteredList)
+    }
 
     private fun setupActionBar() {
 
@@ -78,8 +105,8 @@ class NewMessagesActivity : BaseActivity() {
             binding.rvMyUsers.setHasFixedSize(true)
 
             // START
-            val adapterUsers =
-                UsersAdapter(this, mUsersList )
+             adapterUsers =
+                UsersAdapter(this, mUsersList)
             // END
             binding.rvMyUsers.adapter = adapterUsers
         } else {

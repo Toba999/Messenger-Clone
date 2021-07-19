@@ -7,6 +7,7 @@ import android.provider.MediaStore
 import android.webkit.MimeTypeMap
 
 object Constants {
+    const val USERNAME: String="userName"
     const val ID: String = "id"
     const val MESSAGES: String = "messages"
     const val EXTRA_User_Name: String = "extra_user_name"
