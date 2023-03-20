@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="EditTextMarginStartEnd">40dp</dimen>
+    <dimen name="EditTextPadding">15dp</dimen>
+    <dimen name="ETMarginTop">20dp</dimen>
+    <dimen name="btnRadius">30dp</dimen>
+    <dimen name="btnMarginTop">60dp</dimen>
+    <dimen name="btnTextSize">20sp</dimen>
+    <dimen name="etTextSize">18sp</dimen>
+    <dimen name="tvTextSize">14sp</dimen>
+    <dimen name="progress_dialog_content_padding">10dp</dimen>
+    <dimen name="progress_bar_size">50dp</dimen>
+    <dimen name="progress_text_marginStart">16dp</dimen>
+    <dimen name="progress_text_size">16dp</dimen>
+    <dimen name="user_list_marginTop">15dp</dimen>
+    <dimen name="rv_chat_messages_marginTop">15dp</dimen>
+    <dimen name="ll_message_bar">5dp</dimen>
+    <dimen name="toolbar_title_paddingStart">35dp</dimen>
+    <dimen name="item_user_content_padding">10dp</dimen>
+    <dimen name="item_user_circular_image_size">50dp</dimen>
+    <dimen name="item_user_message_textSize">18sp</dimen>
+    <dimen name="item_user_text_view_marginStart">15dp</dimen>
+    <dimen name="item_user_text_view_marginEnd">10dp</dimen>
+    <dimen name="item_user_message_date_textSize">14sp</dimen>
+
+</resources>

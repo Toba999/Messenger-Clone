@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "865671425982",
+    "project_id": "messenger-clone-7392a",
+    "storage_bucket": "messenger-clone-7392a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865671425982:android:5af2f8be8683963a95d3ef",
+        "android_client_info": {
+          "package_name": "com.example.android.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865671425982-mmiki1sg613rjdhms9uj180a4hmh5j0f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.chatapp",
+            "certificate_hash": "f995ef4af5fb9b889f6135cb085918c2944de0d5"
+          }
+        },
+        {
+          "client_id": "865671425982-t85h3etds97mfrs8lv9fq0sk383rskar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6n5SLDTUvLFjc7pT_2MjPinyJAFTOleE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865671425982-t85h3etds97mfrs8lv9fq0sk383rskar.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:padding="@dimen/item_user_content_padding">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll_current_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_current_user_image"
+                android:layout_width="@dimen/item_user_circular_image_size"
+                android:layout_height="@dimen/item_user_circular_image_size"
+                android:src="@mipmap/ic_launcher_round"
+                app:civ_border_color="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:civ_border_width="2dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_current_user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_current_user_image"
+                android:background="@drawable/tv_messages_background"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_current_user_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/item_user_message_textSize"
+                    tools:text="Name"
+                    android:layout_marginEnd="@dimen/item_user_text_view_marginEnd"
+                    android:layout_marginStart="@dimen/item_user_text_view_marginStart"
+                    android:padding="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_current_user_message_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/SecondaryTextColor"
+                    android:textSize="@dimen/item_user_message_date_textSize"
+                    tools:text="9:16 pm"
+                    android:padding="5dp"
+                    android:layout_marginEnd="@dimen/item_user_text_view_marginEnd"
+                    android:layout_marginStart="@dimen/item_user_text_view_marginStart" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_current_user_seen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seen"
+                android:textColor="@color/SecondaryTextColor"
+                android:textSize="@dimen/item_user_message_date_textSize"
+                android:visibility="gone"
+                android:layout_marginStart="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_current_user_text"
+                tools:visibility="visible"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll_other_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/item_user_content_padding"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_other_user_seen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seen"
+                android:textColor="@color/SecondaryTextColor"
+                android:textSize="@dimen/item_user_message_date_textSize"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/ll_other_user_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="50dp"
+                tools:visibility="visible"/>
+
+            <LinearLayout
+                android:id="@+id/ll_other_user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/iv_other_user_image"
+                android:background="@drawable/tv_messages_background"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_other_user_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/item_user_message_textSize"
+                    tools:text="Name"
+                    android:layout_marginEnd="@dimen/item_user_text_view_marginEnd"
+                    android:layout_marginStart="@dimen/item_user_text_view_marginStart"
+                    android:padding="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_other_user_message_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/SecondaryTextColor"
+                    android:textSize="@dimen/item_user_message_date_textSize"
+                    tools:text="9:16 pm"
+                    android:padding="5dp"
+                    android:layout_marginEnd="@dimen/item_user_text_view_marginEnd"
+                    android:layout_marginStart="@dimen/item_user_text_view_marginStart" />
+
+            </LinearLayout>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_other_user_image"
+                android:layout_width="@dimen/item_user_circular_image_size"
+                android:layout_height="@dimen/item_user_circular_image_size"
+                android:src="@mipmap/ic_launcher_round"
+                app:civ_border_color="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:civ_border_width="2dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
