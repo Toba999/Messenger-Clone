@@ -52,7 +52,7 @@ open class LatestMessagesAdapter(
 
                 if (holder is MyViewHolder) {
 
-                        GlideLoader(context).loadProductPicture(model.image, holder.viewBinding.ivUserPhoto)
+                        GlideLoader(context).loadUserPicture(model.image, holder.viewBinding.ivUserPhoto)
                         holder.viewBinding.tvUserName.text = model.userName
                         lastMessage(model.id, holder.viewBinding.tvLastMessage)
 

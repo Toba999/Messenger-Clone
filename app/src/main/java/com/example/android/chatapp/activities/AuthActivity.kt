@@ -11,6 +11,7 @@ import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -29,16 +30,13 @@ class AuthActivity : BaseActivity(),View.OnClickListener {
 
     private var mSelectedImageFileUri: Uri? = null
     private var mUserProfileImageURL: String = ""
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.tvHaveAccount.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
-
 
         binding.btnRegister.setOnClickListener (this)
 
@@ -171,7 +169,6 @@ class AuthActivity : BaseActivity(),View.OnClickListener {
             }
         }
     }
-
     private fun showImageChooser() {
         // An intent for launching the image selection of phone storage.
         val galleryIntent = Intent(

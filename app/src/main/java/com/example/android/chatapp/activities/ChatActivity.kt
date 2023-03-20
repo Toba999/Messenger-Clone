@@ -31,11 +31,6 @@ class ChatActivity :BaseActivity() {
 
         getCurrentUserDetails()
 
-
-
-
-
-
         if (intent.hasExtra(Constants.EXTRA_USER_DETAILS)){
             otherUser = intent.getParcelableExtra(Constants.EXTRA_USER_DETAILS)!!
             binding.tvTitleChat.text = otherUser.userName

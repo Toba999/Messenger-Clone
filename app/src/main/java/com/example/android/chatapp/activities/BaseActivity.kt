@@ -73,17 +73,4 @@ open class BaseActivity : AppCompatActivity() {
         mProgressDialog.dismiss()
     }
 
-    fun doubleBackToExit() {
-        if (doubleBackToExitPressedOnce){
-            super.onBackPressed()
-            return
-        }
-        doubleBackToExitPressedOnce = true
-        Toast.makeText(this
-            ,resources.getString(R.string.please_click_back_again_to_exit)
-            , Toast.LENGTH_SHORT).show()
-
-        @Suppress("DEPRECATION")
-        Handler().postDelayed({doubleBackToExitPressedOnce=false},2000)
-    }
 }

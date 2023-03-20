@@ -13,12 +13,11 @@ import com.example.android.chatapp.fireStore.FireStoreClass
 import com.example.android.chatapp.models.User
 
 class NewMessagesActivity : BaseActivity() {
+
     private lateinit var binding : ActivityNewMessagesBinding
     private var currentUser: User? = null
     private lateinit var mUsersList: ArrayList<User>
     var adapterUsers : UsersAdapter?=null
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
